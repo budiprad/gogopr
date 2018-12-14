@@ -1,0 +1,2 @@
+class CountryRepository
+end

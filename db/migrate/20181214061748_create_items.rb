@@ -11,7 +11,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :est_unit_price
       t.string :est_total_price
       t.string :attachment
-
+      t.references :request, foreign_key: true
       t.timestamps
     end
   end

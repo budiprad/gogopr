@@ -4,10 +4,10 @@ FactoryBot.define do
       date_needed { "2018-12-30" }
       reason_to_procure { "pengen aja" }
       grand_total { "999999999" }
-      country_id { 1 }
-      entity_id { 1 }
-      business_unit_id { 1 }
-      cost_center_id { 1 }
+      country
+      entity
+      business_unit
+      cost_center
     end
   end
   

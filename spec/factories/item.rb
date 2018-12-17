@@ -8,9 +8,9 @@ FactoryBot.define do
       est_unit_price { "10000" }
       est_total_price { "1000000" }
       attachment { "none" }
-      chart_of_account_id { 1 }
-      product_id { 1 }
-      # request_id { 1 }
+      chart_of_account
+      product
+      request
     end
   end
   

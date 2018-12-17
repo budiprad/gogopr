@@ -65,10 +65,12 @@ ActiveRecord::Schema.define(version: 2018_12_14_067070) do
     t.string "est_unit_price"
     t.string "est_total_price"
     t.string "attachment"
+    t.bigint "request_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chart_of_account_id"], name: "index_items_on_chart_of_account_id"
     t.index ["product_id"], name: "index_items_on_product_id"
+    t.index ["request_id"], name: "index_items_on_request_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -129,6 +131,7 @@ ActiveRecord::Schema.define(version: 2018_12_14_067070) do
   add_foreign_key "entities", "countries"
   add_foreign_key "items", "chart_of_accounts"
   add_foreign_key "items", "products"
+  add_foreign_key "items", "requests"
   add_foreign_key "requests", "business_units"
   add_foreign_key "requests", "cost_centers"
   add_foreign_key "requests", "countries"
